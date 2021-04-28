@@ -19,6 +19,8 @@ requirements:
   host:
     - pip
     - python >=3.5
+    - setuptools >=46.4.0
+    - wheel
   run:
     - python >=3.5
 
