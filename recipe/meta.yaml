@@ -41,7 +41,7 @@ about:
 
   description: |
     This module provides various memoizing collections and decorators, including variants of the Python 3 Standard Library @lru_cache function decorator.
-  doc_url: http://pythonhosted.org/cachetools/
+  doc_url: https://pypi.org/project/cachetools/
   dev_url: https://github.com/tkem/cachetools
 
 extra:
