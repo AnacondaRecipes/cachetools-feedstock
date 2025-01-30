@@ -1,5 +1,5 @@
 {% set name = "cachetools" %}
-{% set version = "5.3.3" %}
+{% set version = "5.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105
+  sha256: 70f238fbba50383ef62e55c6aff6d9673175fe59f7c6782c7a0b9e38f4a9df95
 
 build:
   number: 0
@@ -19,18 +19,22 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
+    - setuptools >=46.4.0
     - wheel
   run:
     - python
 
 test:
+  source_files:
+    - tests
   imports:
     - cachetools
   commands:
     - pip check
+    - pytest -v tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/tkem/cachetools
@@ -38,7 +42,6 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Extensible memoizing collections and decorators
-
   description: |
     This module provides various memoizing collections and decorators, including variants of the Python 3 Standard Library @lru_cache function decorator.
   doc_url: https://pypi.org/project/cachetools/
