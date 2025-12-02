@@ -1,18 +1,17 @@
 {% set name = "cachetools" %}
-{% set version = "5.5.1" %}
-
+{% set version = "6.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 70f238fbba50383ef62e55c6aff6d9673175fe59f7c6782c7a0b9e38f4a9df95
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 8e6d266b25e539df852251cfd6f990b4bc3a141db73b939058d809ebd2590fc6
 
 build:
   number: 0
-  skip: True  # [py<37]
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
