@@ -1,5 +1,5 @@
 {% set name = "cachetools" %}
-{% set version = "7.2.8" %}
+{% set version = "8.0.0" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3f9b146b2160975da273e7c23ec882f3996b65df608150d52083c07de0682075
+  sha256: 5ed01bd676800d51f0025605e4fd8ad0891550513e7b0a4c3da478463764e5c3
 
 build:
   number: 0
-  skip: true  # [py<310]
+  skip: true  # [py<311]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
