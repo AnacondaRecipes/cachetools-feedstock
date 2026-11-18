@@ -45,8 +45,8 @@ about:
   summary: Extensible memoizing collections and decorators
   description: |
     This module provides various memoizing collections and decorators, including variants of the Python 3 Standard Library @lru_cache function decorator.
-  doc_url: https://cachetools.readthedocs.io/en/stable/
-  dev_url: https://github.com/tkem/cachetools/tree/v8.0.0
+  doc_url: https://pypi.org/project/cachetools/
+  dev_url: https://github.com/tkem/cachetools
 
 extra:
   recipe-maintainers:
